@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard';
 import LoginPage from './pages/LoginPage';
 import PrivateRoute from './components/PrivateRoute';
 import { AppProvider } from './context/AppContext';
+import RichTextEditor from './components/RichTextEditor';
 
 function App() {
   return (
@@ -39,6 +40,16 @@ function App() {
               element={
                 <PrivateRoute>
                   <UserForm />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/richtexteditor"
+              element={
+                <PrivateRoute>
+                  <RichTextEditor value={''} onChange={function (value: string): void {
+                    throw new Error('Function not implemented.');
+                  } }/>
                 </PrivateRoute>
               }
             />

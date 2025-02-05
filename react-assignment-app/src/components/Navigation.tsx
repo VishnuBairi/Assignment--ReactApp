@@ -37,6 +37,14 @@ const Navigation = () => {
               >
                 Profile
               </Button>
+              <Button
+                color="inherit"
+                component={Link}
+                to="/richtexteditor"
+                variant={location.pathname === '/richtexteditor' ? 'outlined' : 'text'}
+              >
+                RichText
+              </Button>
             </>
           )}
         </Box>
